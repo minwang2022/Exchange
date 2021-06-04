@@ -628,7 +628,7 @@ function plot(allData, dropDown){
     svg
         .selectAll("g")
         .transition()
-        .duration(100)
+        .duration(0)
         .attr("svgWidth", 0).remove()
         // .ease("exp")  
 
