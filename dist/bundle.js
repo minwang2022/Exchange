@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "h1 {\n  color: orange;\n}", "",{"version":3,"sources":["webpack://./src/styles/main.scss"],"names":[],"mappings":"AACA;EACI,aAAA;AAAJ","sourcesContent":["\nh1 {\n    color: orange;\n  }"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "h1 {\n  color: orange;\n}\n\n.background-container {\n  width: 90%;\n  height: auto;\n  padding: 0 0 0 50px;\n  scroll-behavior: smooth;\n  display: flex;\n  margin: auto;\n  /*     max-width: 1200px; */\n  box-sizing: border-box;\n}\n\n#main-header-container {\n  position: sticky;\n  top: 0;\n  background-color: white;\n  padding-top: 15px;\n  margin-top: 0px;\n  margin-bottom: 0px;\n}\n\n#main-header-container {\n  display: flex;\n  align-items: center;\n}\n\n#main-header {\n  margin-bottom: 3px;\n}\n\n#main-header-container ul {\n  display: flex;\n  width: 150px;\n  height: 25px;\n  list-style: none;\n  padding: 0;\n  margin-left: 100px;\n}\n\n#main-header-container ul li {\n  width: 25px;\n  margin-right: 30px;\n}\n\n.logo-li a img {\n  height: 100%;\n  width: auto;\n  transition: all 1s;\n}\n\n.logo-li a img:hover {\n  animation: flip-icon 2s ease-in-out infinite;\n}\n\n@keyframes flip-icon {\n  0% {\n    transform: rotateY(0deg);\n  }\n  50% {\n    transform: rotateY(180deg);\n  }\n  100% {\n    transform: rotateY(360deg);\n  }\n}\n.dropbtn {\n  background-color: #a87e0a;\n  color: white;\n  padding: 16px;\n  font-size: 16px;\n  border: none;\n  cursor: pointer;\n}\n\n.dropbtn:hover, .dropbtn:focus {\n  background-color: #312408;\n}\n\n#myInput {\n  box-sizing: border-box;\n  background-position: 14px 12px;\n  background-repeat: no-repeat;\n  font-size: 16px;\n  padding: 14px 20px 12px 45px;\n  border: none;\n  border-bottom: 1px solid #ddd;\n}\n\n#myInput:focus {\n  outline: 3px solid #ddd;\n}\n\n.dropdown {\n  position: relative;\n  display: inline-block;\n}\n\n.dropdown-content {\n  display: none;\n  position: absolute;\n  background-color: #f6f6f6;\n  min-width: 230px;\n  overflow: auto;\n  border: 1px solid #ddd;\n  z-index: 1;\n}\n\n.dropdown-content a {\n  color: black;\n  padding: 12px 16px;\n  text-decoration: none;\n  display: block;\n}\n\n.dropdown a:hover {\n  background-color: #ddd;\n}\n\n.show {\n  display: block;\n}\n\n.bar-chart {\n  display: flex;\n  height: auto;\n  width: 75%;\n  margin-bottom: 125px;\n  min-height: 600px;\n  margin-left: 250px;\n  font-size: 8px;\n}\n\n.y-axis-label {\n  font-size: 10px;\n  font-family: sans-serif;\n}\n\n.source-text {\n  font-size: 10px;\n  font-family: sans-serif;\n}", "",{"version":3,"sources":["webpack://./src/styles/main.scss"],"names":[],"mappings":"AACA;EACI,aAAA;AAAJ;;AAEA;EACI,UAAA;EACA,YAAA;EACA,mBAAA;EACA,uBAAA;EACA,aAAA;EACA,YAAA;EACJ,2BAAA;EACI,sBAAA;AACJ;;AAOA;EACI,gBAAA;EACA,MAAA;EACA,uBAAA;EACA,iBAAA;EACA,eAAA;EACA,kBAAA;AAJJ;;AAOA;EACI,aAAA;EACA,mBAAA;AAJJ;;AAOA;EACI,kBAAA;AAJJ;;AAOA;EACI,aAAA;EACA,YAAA;EACA,YAAA;EACA,gBAAA;EACA,UAAA;EACA,kBAAA;AAJJ;;AAOA;EACI,WAAA;EACA,kBAAA;AAJJ;;AAOA;EACI,YAAA;EACA,WAAA;EACA,kBAAA;AAJJ;;AAOA;EACI,4CAAA;AAJJ;;AAOA;EACI;IACI,wBAAA;EAJN;EAOE;IACI,0BAAA;EALN;EAQE;IACI,0BAAA;EANN;AACF;AASA;EACI,yBAAA;EACA,YAAA;EACA,aAAA;EACA,eAAA;EACA,YAAA;EACA,eAAA;AAPJ;;AAUA;EACI,yBAAA;AAPJ;;AAUA;EACI,sBAAA;EAEA,8BAAA;EACA,4BAAA;EACA,eAAA;EACA,4BAAA;EACA,YAAA;EACA,6BAAA;AARJ;;AAWA;EAAgB,uBAAA;AAPhB;;AASA;EACI,kBAAA;EACA,qBAAA;AANJ;;AASA;EACI,aAAA;EACA,kBAAA;EACA,yBAAA;EACA,gBAAA;EACA,cAAA;EACA,sBAAA;EACA,UAAA;AANJ;;AAUA;EACI,YAAA;EACA,kBAAA;EACA,qBAAA;EACA,cAAA;AAPJ;;AAUA;EACI,sBAAA;AAPJ;;AAUA;EAAO,cAAA;AANP;;AASA;EACI,aAAA;EACA,YAAA;EACA,UAAA;EACA,oBAAA;EACA,iBAAA;EACA,kBAAA;EACA,cAAA;AANJ;;AASA;EACI,eAAA;EACA,uBAAA;AANJ;;AAQA;EACI,eAAA;EACA,uBAAA;AALJ","sourcesContent":["\nh1 {\n    color: orange;\n}\n.background-container {\n    width: 90%;\n    height: auto;\n    padding: 0 0 0 50px;\n    scroll-behavior: smooth;\n    display: flex;\n    margin: auto;\n/*     max-width: 1200px; */\n    box-sizing: border-box;\n}\n\n// #header-and-nav-container {\n//     display: flex;\n//     align-items: flex-start;\n// }\n\n#main-header-container {\n    position: sticky;\n    top: 0;\n    background-color: white;\n    padding-top: 15px;\n    margin-top: 0px;\n    margin-bottom: 0px;\n}\n\n#main-header-container {\n    display: flex;\n    align-items: center;\n}\n\n#main-header {\n    margin-bottom: 3px;\n}\n\n#main-header-container ul {\n    display: flex;\n    width: 150px;\n    height: 25px;\n    list-style: none;\n    padding: 0;\n    margin-left: 100px;\n}\n\n#main-header-container ul li {\n    width: 25px;\n    margin-right: 30px;\n}\n\n.logo-li a img {\n    height: 100%;\n    width: auto;\n    transition: all 1s;\n}\n\n.logo-li a img:hover {\n    animation: flip-icon 2s ease-in-out infinite;\n}\n\n@keyframes flip-icon {\n    0% {\n        transform: rotateY(0deg)\n    }\n\n    50% {\n        transform: rotateY(180deg)\n    }\n\n    100% {\n        transform: rotateY(360deg)\n    }\n}\n\n.dropbtn {\n    background-color: #a87e0a;\n    color: white;\n    padding: 16px;\n    font-size: 16px;\n    border: none;\n    cursor: pointer;\n}\n\n.dropbtn:hover, .dropbtn:focus {\n    background-color: #312408;\n}\n\n#myInput {\n    box-sizing: border-box;\n    // background-image: url('github.png');\n    background-position: 14px 12px;\n    background-repeat: no-repeat;\n    font-size: 16px;\n    padding: 14px 20px 12px 45px;\n    border: none;\n    border-bottom: 1px solid #ddd;\n}\n\n#myInput:focus {outline: 3px solid #ddd;}\n\n.dropdown {\n    position: relative;\n    display: inline-block;\n}\n\n.dropdown-content {\n    display: none;\n    position: absolute;\n    background-color: #f6f6f6;\n    min-width: 230px;\n    overflow: auto;\n    border: 1px solid #ddd;\n    z-index: 1;\n\n}\n\n.dropdown-content a {\n    color: black;\n    padding: 12px 16px;\n    text-decoration: none;\n    display: block;\n}\n\n.dropdown a:hover {\n    background-color: #ddd;\n}\n\n.show {display: block;}\n\n\n.bar-chart {\n    display: flex;\n    height: auto;\n    width: 75%;\n    margin-bottom: 125px;\n    min-height: 600px;\n    margin-left: 250px;\n    font-size: 8px;\n}\n\n.y-axis-label {\n    font-size: 10px;\n    font-family: sans-serif;\n} \n.source-text {\n    font-size: 10px;\n    font-family: sans-serif;\n} "],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -449,6 +449,37 @@ module.exports = function (list, options) {
   };
 };
 
+/***/ }),
+
+/***/ "./src/scripts/dropdown.js":
+/*!*********************************!*\
+  !*** ./src/scripts/dropdown.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "myFunction": () => (/* binding */ myFunction),
+/* harmony export */   "GetSelectedValue": () => (/* binding */ GetSelectedValue)
+/* harmony export */ });
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function GetSelectedValue(){
+let e = document.getElementById("myDropdown");
+console.log(e);
+let result = e.options[e.selectedIndex].value;
+console.log(result);
+return result;
+
+// document.getElementById("result").innerHTML = result;
+}
+
+
+
+// export {myFunction, GetSelectedValue};
+
 /***/ })
 
 /******/ 	});
@@ -527,12 +558,255 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
+/* harmony import */ var _scripts_dropdown__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scripts/dropdown */ "./src/scripts/dropdown.js");
 
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('hello');
-  });
+function reRender(){
+    d3.csv("currencies.csv", d => {
+        return {
+            Currency: d["Currency"],
+            "May 20": +d["2020-05"], 
+            "Jun 20": +d["2020-06"], 
+            "Jul 20": +d["2020-07"], 
+            "Aug 20": +d["2020-08"], 
+            "Sept 20": +d["2020-09"], 
+            "Oct 20": +d["2020-10"], 
+            "Nov 20": +d["2020-11"], 
+            "Dec 20": +d["2020-12"], 
+            "Jan 21": +d["2021-01"], 
+            "Feb 21": +d["2021-02"], 
+            "Mar 21": +d["2021-03"], 
+            "Apr 21": +d["2021-04"], 
+            "May 21": +d["2021-05"], 
+        };
+    }).then(data => {
+        let currencyData = {};
+
+        for (let i = 0; i < data.length - 1; i++) {
+            let plotData = []
+            for (var key in data[i]){
+                if (key !="Currency"){
+                    plotData.push({
+                        month: key,
+                        rate: +data[i][key]
+                    })
+                };
+            };
+            currencyData[data[i]["Currency"]] = plotData;
+
+        };
+        
+        let dropdownCurrency = (0,_scripts_dropdown__WEBPACK_IMPORTED_MODULE_1__.GetSelectedValue)() || "JPY" ;
+        plot(currencyData, dropdownCurrency)
+            // debugger
+    });
+} 
+
+
+function plot(allData, dropDown){
+    let selectData = allData[dropDown];
+    
+    let dataset = selectData.map((s) => s.rate);
+    let datatime = selectData.map((s) => s.month);
+    console.log(selectData)
+    console.log(dataset)
+    console.log(datatime)
+    // debugger 
+    let margin = 50;
+    let svgWidth = 700 - 2 * margin;
+    let svgHeight = 500 - 2 * margin;
+
+    let minYvalue = d3.min(dataset)* 0.99
+    let maxYvalue = d3.max(dataset)*1.01
+
+    
+    let svg = d3.select('svg');
+    // debugger 
+    
+    svg
+        .selectAll("g")
+        .transition()
+        .duration(100)
+        .attr("svgWidth", 0).remove()
+        // .ease("exp")  
+
+    let chart = svg.append('g')
+        .attr('transform', `translate(${margin}, ${margin})`);
+
+    let yScale = d3.scaleLinear()
+        .domain([minYvalue, maxYvalue])
+        .range([svgHeight, 0])
+
+    chart.append('g')
+        .call(d3.axisLeft(yScale));
+
+    let xScale = d3.scaleBand()
+        .range([0, svgWidth])
+        .domain(datatime)
+        .padding(0.2)
+    //   debugger
+
+    /// append x axis data text/// 
+    chart.append('g')
+        .attr('transform', `translate(0, ${svgHeight})`)
+        .call(d3.axisBottom(xScale))
+        .selectAll("text")
+        .attr("transform", "translate(-10,0)rotate(-45)")
+        .style("text-anchor", "end");
+
+    const barGroups = chart.selectAll()
+      .data(selectData)
+      .enter()
+      .append('g')
+
+    
+    /// Bar ///
+    barGroups
+        .append('rect')
+        .attr("x", d => xScale(d.month))
+        .attr('width', xScale.bandwidth())
+        .attr("fill", "#69b3a2")
+        /// no bar at beginning ///
+        .attr('height', d => svgHeight - yScale(0))
+        .attr("y", d => yScale(0))
+        
+        ///mouse over and leave ///    
+        
+        // .on("mouseenter", function (actual, i) {
+    
+        //     d3.selectAll(".value")
+        //       .attr("opacity", 0)
+
+        //     d3.select(this)
+        //     .transition()
+        //     .duration(300)
+        //     .attr("opacity", 0.6)
+        //     .attr("x", a => xScale(a.month) - 5)
+        //     .attr("width", xScale.bandwidth() + 10)   
+     
+    //         barGroups
+    //             .append('text')
+    //             .attr('class', 'divergence')
+    //             .attr('x', (a) => xScale(a.month) + xScale.bandwidth() / 2)
+    //             .attr('y', (a) => yScale(a.rate) + 30)
+    //             .attr('fill', 'white')
+    //             .attr('text-anchor', 'middle')
+    //             .text((a, idx) => {
+    //                 console.log(idx);
+    //                 const divergence = (a.value - actual.value).toFixed(1)
+    //                 // debugger 
+    //                 let text = ''
+    //                 if (divergence > 0) text += '+'
+    //                 text += `${divergence}`
+        
+    //                 return idx !== i ? text : '';
+    //             })
+    //     })
+    //     .on("mouseleave", function (){
+    //         d3.selectAll(".value")
+    //             .attr("opacity", 1)
+
+    //         d3.select(this)
+    //             .transition()
+    //             .duration(300)
+    //             .attr('opacity', 1)
+    //             .attr('x', a => xScale(a.month))
+    //             .attr('width', xScale.bandwidth())
+  
+    //       chart.selectAll('#limit').remove()
+    //       chart.selectAll('.divergence').remove()
+          
+    //     })
+        
+    // chart
+    //     .selectAll()
+    //     .data(dataset)
+    //     .enter()
+    //     .append('g')
+    //     .append('text')
+    //     .attr('class', 'value')
+    //     .attr('x', (a) => xScale(a.month) + xScale.bandwidth() / 2)
+    //     .attr('y', (a) => yScale(a.rate) + 30)
+    //     .attr('text-anchor', 'middle')
+    //     .text((a) => a.rate)
+    //     // debugger 
+    /// animation ///
+    chart
+        .selectAll("rect")      
+        .transition()   /// d3.js animation method///
+        .duration(800)  ///speed///
+        .attr("y", (d) => yScale(d.rate))  /// bar height ///
+        .attr("height", (d) => svgHeight - yScale(d.rate))  ///starting point///
+        .delay((d,i) => {return i* 100}) ///animation speed delayed///
+        
+        // Vertical chart text ///
+    chart
+        .append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("class", "y-axis-label")
+        .attr("y", -50)
+        .attr("x", 0 - svgHeight / 2)
+        .attr("dy", "1em")
+        .style("text-anchor", "middle")
+        .text("Exchange Rate Over One US Dollar ($1)");
+    
+    // horizontal chart text ///
+    chart
+        .append("text")
+        .attr("class", "source-text")
+        .attr("transform",
+          "translate(15, " +
+          (svgHeight + 55) + ")")
+        .style("text-anchor", "left")
+        .text("Source: FED");
+
+    /// append Title ///
+    chart
+        .append("text")
+        .attr("x", (svgWidth / 2))             
+        .attr("text-anchor", "middle")  
+        .style("font-size", "16px") 
+        .text("Yearly Average USD Exchange Rate");
+}
+
+
+
+// window.addEventListener("load", (e) => {
+//     let dropdownCurrency = GetSelectedValue() || "MXN" ;
+//     plot(currencyData, dropdownCurrency)
+//     GetSelectedValue()
+// }, false);  
+
+/// vertical grid line ///
+    // chart.append('g')
+    //     .attr('class', 'grid')
+    //     .attr('transform', `translate(0, ${height})`)
+    //     .call(d3.axisBottom()
+    //     .scale(xScale)
+    //     .tickSize(-height, 0, 0)
+    //     .tickFormat(''))
+
+
+/// horizontal grid line ///
+    
+    // chart.append('g')
+    //     .attr('class', 'grid')
+    //     .call(d3.axisLeft()
+    //     .scale(yScale)
+    //     .tickSize(-width, 0, 0)
+    //     .tickFormat(''))
+   
+
+document.addEventListener('DOMContentLoaded', (e) => {
+    // GetSelectedValue()
+    document.getElementById("dropdownbtn").addEventListener("click", _scripts_dropdown__WEBPACK_IMPORTED_MODULE_1__.myFunction); 
+    document.getElementById("myDropdown").addEventListener("change", reRender)
+
+    // console.log("helloooooo")
+});
+
+
 })();
 
 /******/ })()

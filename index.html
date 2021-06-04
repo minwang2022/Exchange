@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Exchange</title>
+  </head>
+  
+  <body>
+    
+    
+    <div class="background-container">
+      <div id="new-viewable-area">
+          <div id="main-header-container">
+              <div id="header-sub-container">
+                  <h1 id="main-header">Exchange Rate: Currencies Over USD</h1>
+                  <div id="new-byline">By <a target="_blank" href="https://github.com/minwang2022">Min Wang</a></div>
+              </div>
+              <ul class="logos-bar">
+                  <li class="logo-li">
+                      <a href="https://github.com/minwang2022/Exchange" target="_blank">
+                          <img src="./src/styles/github.png" alt="Link to Min's Github">
+                      </a>
+                  </li>
+                  <li class="logo-li">
+                      <a href="http://linkedin.com/in/mike-wang-38294097" target="_blank">
+                          <img src="./src/styles/linkedin.png" alt="Link to Min's LinkedIn">
+                      </a>
+                  </li>
+                  <li class="logo-li">
+                      <a href="https://angel.co/" target="_blank">
+                          <img src="./src/styles/angellist.png" alt="Link to Min's AngelList">
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+    </div>
+        
+          <br/>
+          <div class="dropdown">
+            <button id="dropdownbtn" class="dropbtn">Select Currency</button>
+            <select id="myDropdown" class="dropdown-content">
+              <!-- <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()"> -->
+              <option value="JPY">JPY</option>
+              <option value="CAD">CAD</option>
+              <option  value="MXN">MXN</option>
+              <option value="TRY">TRY</option>
+              <option value="CNY">CNY</option>
+              <option value="RUB">RUB</option>
+              <option value="EUR">EUR</option>
+              <option value="BRL">BRL</option>
+              <option value="CHF">CHF</option>
+              <option value="KRW">KRW</option>
+              <option value="GBP">GBP</option>
+              <option value="INR">INR</option>
+              <option value="AUD">AUD</option>
+              <option value="SGD">SGD</option>
+              <option value="ZAR">ZAR</option>
+              <option value="TWD">TWD</option>
+            
+            </select>
+          </div>
+          <br/>
+
+
+  <div class="bar-container"> 
+    <svg class="bar-chart"></svg>
+  </div>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script src="./dist/bundle.js"></script>
+  
+  </body>
+</html>

@@ -1,4 +1,150 @@
 
 h1 {
     color: orange;
-  }
+}
+.background-container {
+    width: 90%;
+    height: auto;
+    padding: 0 0 0 50px;
+    scroll-behavior: smooth;
+    display: flex;
+    margin: auto;
+/*     max-width: 1200px; */
+    box-sizing: border-box;
+}
+
+// #header-and-nav-container {
+//     display: flex;
+//     align-items: flex-start;
+// }
+
+#main-header-container {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    padding-top: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#main-header-container {
+    display: flex;
+    align-items: center;
+}
+
+#main-header {
+    margin-bottom: 3px;
+}
+
+#main-header-container ul {
+    display: flex;
+    width: 150px;
+    height: 25px;
+    list-style: none;
+    padding: 0;
+    margin-left: 100px;
+}
+
+#main-header-container ul li {
+    width: 25px;
+    margin-right: 30px;
+}
+
+.logo-li a img {
+    height: 100%;
+    width: auto;
+    transition: all 1s;
+}
+
+.logo-li a img:hover {
+    animation: flip-icon 2s ease-in-out infinite;
+}
+
+@keyframes flip-icon {
+    0% {
+        transform: rotateY(0deg)
+    }
+
+    50% {
+        transform: rotateY(180deg)
+    }
+
+    100% {
+        transform: rotateY(360deg)
+    }
+}
+
+.dropbtn {
+    background-color: #a87e0a;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #312408;
+}
+
+#myInput {
+    box-sizing: border-box;
+    // background-image: url('github.png');
+    background-position: 14px 12px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    padding: 14px 20px 12px 45px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    min-width: 230px;
+    overflow: auto;
+    border: 1px solid #ddd;
+    z-index: 1;
+
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {
+    background-color: #ddd;
+}
+
+.show {display: block;}
+
+
+.bar-chart {
+    display: flex;
+    height: auto;
+    width: 75%;
+    margin-bottom: 125px;
+    min-height: 600px;
+    margin-left: 250px;
+    font-size: 8px;
+}
+
+.y-axis-label {
+    font-size: 10px;
+    font-family: sans-serif;
+} 
+.source-text {
+    font-size: 10px;
+    font-family: sans-serif;
+} 
