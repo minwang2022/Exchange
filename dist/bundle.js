@@ -610,9 +610,9 @@ function plot(allData, dropDown){
     
     let dataset = selectData.map((s) => s.rate);
     let datatime = selectData.map((s) => s.month);
-    // console.log(selectData)
-    // console.log(dataset)
-    // console.log(datatime)
+    console.log(selectData)
+    console.log(dataset)
+    console.log(datatime)
     debugger 
     let margin = 50;
     let svgWidth = 700 - 2 * margin;
