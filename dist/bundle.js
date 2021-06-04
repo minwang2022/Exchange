@@ -562,6 +562,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 function reRender(){
     d3.csv("currencies.csv", d => {
         return {
@@ -583,7 +584,7 @@ function reRender(){
     }).then(data => {
         let currencyData = {};
 
-        for (let i = 0; i < data.length - 1; i++) {
+        for (let i = 0; i < data.length; i++) {
             let plotData = []
             for (var key in data[i]){
                 if (key !="Currency"){
@@ -612,7 +613,7 @@ function plot(allData, dropDown){
     console.log(selectData)
     console.log(dataset)
     console.log(datatime)
-    // debugger 
+    debugger 
     let margin = 50;
     let svgWidth = 700 - 2 * margin;
     let svgHeight = 500 - 2 * margin;
