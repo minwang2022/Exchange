@@ -125,7 +125,7 @@ function plot(allData, dropDown){
         .duration(280)  ///speed///
         .attr("y", (d) => yScale(d.rate))  /// bar height ///
         .attr("height", (d) => svgHeight - yScale(d.rate))  ///starting point///
-        .delay((d,i) => {return i* 100}) ///animation speed delayed///
+        .delay((d,i) => {return i* 10}) ///animation speed delayed///
         
  
     chart
@@ -136,7 +136,7 @@ function plot(allData, dropDown){
         .append('g')
         .append('text')
         .transition()   /// d3.js animation method///
-        .duration(1500)  ///speed///
+        .duration(800)  ///speed///
         .attr('class', 'value')
         .attr('x', (a) => xScale(a.month) + xScale.bandwidth() / 2)
         .attr('y', (a) => yScale(a.rate) + 9)
