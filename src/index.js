@@ -80,6 +80,8 @@ function plot(allData, dropDown){
         
 
     chart.append('g')
+        .transition()
+        .duration(1000)
         .call(d3.axisLeft(yScale))
      
 
@@ -120,7 +122,7 @@ function plot(allData, dropDown){
     chart
         .selectAll("rect")
         .transition()   /// d3.js animation method///
-        .duration(800)  ///speed///
+        .duration(280)  ///speed///
         .attr("y", (d) => yScale(d.rate))  /// bar height ///
         .attr("height", (d) => svgHeight - yScale(d.rate))  ///starting point///
         .delay((d,i) => {return i* 100}) ///animation speed delayed///
