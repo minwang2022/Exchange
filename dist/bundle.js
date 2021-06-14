@@ -468,9 +468,9 @@ function myFunction() {
 
 function GetSelectedValue(){
 let e = document.getElementById("myDropdown");
-console.log(e);
+// console.log(e);
 let result = e.options[e.selectedIndex].value;
-console.log(result);
+// console.log(result);
 return result;
 
 // document.getElementById("result").innerHTML = result;
@@ -561,6 +561,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scripts_dropdown__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scripts/dropdown */ "./src/scripts/dropdown.js");
 
 
+// import { render } from "sass";
 
 
 function reRender(){
@@ -586,7 +587,7 @@ function reRender(){
 
         for (let i = 0; i < data.length; i++) {
             let plotData = []
-            for (var key in data[i]){
+            for (let key in data[i]){
                 if (key !="Currency"){
                     plotData.push({
                         month: key,
@@ -598,7 +599,7 @@ function reRender(){
 
         };
         
-        let dropdownCurrency = (0,_scripts_dropdown__WEBPACK_IMPORTED_MODULE_1__.GetSelectedValue)() || "JPY" ;
+        let dropdownCurrency = (0,_scripts_dropdown__WEBPACK_IMPORTED_MODULE_1__.GetSelectedValue)() || ("JPY");
         plot(currencyData, dropdownCurrency)
             // debugger
     });
@@ -610,9 +611,6 @@ function plot(allData, dropDown){
     
     let dataset = selectData.map((s) => s.rate);
     let datatime = selectData.map((s) => s.month);
-    // console.log(selectData)
-    // console.log(dataset)
-    // console.log(datatime)
     // debugger 
     let margin = 50;
     let svgWidth = 700 - 2 * margin;
@@ -625,6 +623,7 @@ function plot(allData, dropDown){
     let svg = d3.select('svg');
     // debugger 
     
+    // removing all chart info for animation over new chart
     svg
         .selectAll("g")
         .transition()
@@ -638,8 +637,11 @@ function plot(allData, dropDown){
     let yScale = d3.scaleLinear()
         .domain([minYvalue, maxYvalue])
         .range([svgHeight, 0])
+        
 
     chart.append('g')
+        .transition()
+        .duration(1000)
         .call(d3.axisLeft(yScale));
 
     let xScale = d3.scaleBand()
@@ -652,6 +654,8 @@ function plot(allData, dropDown){
     chart.append('g')
         .attr('transform', `translate(0, ${svgHeight})`)
         .call(d3.axisBottom(xScale))
+        .transition()
+        .duration(1000)
         .selectAll("text")
         .attr("transform", "translate(-10,0)rotate(-45)")
         .style("text-anchor", "end");
@@ -665,6 +669,7 @@ function plot(allData, dropDown){
     /// Bar ///
     barGroups
         .append('rect')
+        .attr('class', 'bar')
         .attr("x", d => xScale(d.month))
         .attr('width', xScale.bandwidth())
         .attr("fill", "#69b3a2")
@@ -672,74 +677,28 @@ function plot(allData, dropDown){
         .attr('height', d => svgHeight - yScale(0))
         .attr("y", d => yScale(0))
         
-        ///mouse over and leave ///    
-        
-        // .on("mouseenter", function (actual, i) {
-    
-        //     d3.selectAll(".value")
-        //       .attr("opacity", 0)
-
-        //     d3.select(this)
-        //     .transition()
-        //     .duration(300)
-        //     .attr("opacity", 0.6)
-        //     .attr("x", a => xScale(a.month) - 5)
-        //     .attr("width", xScale.bandwidth() + 10)   
-     
-    //         barGroups
-    //             .append('text')
-    //             .attr('class', 'divergence')
-    //             .attr('x', (a) => xScale(a.month) + xScale.bandwidth() / 2)
-    //             .attr('y', (a) => yScale(a.rate) + 30)
-    //             .attr('fill', 'white')
-    //             .attr('text-anchor', 'middle')
-    //             .text((a, idx) => {
-    //                 console.log(idx);
-    //                 const divergence = (a.value - actual.value).toFixed(1)
-    //                 // debugger 
-    //                 let text = ''
-    //                 if (divergence > 0) text += '+'
-    //                 text += `${divergence}`
-        
-    //                 return idx !== i ? text : '';
-    //             })
-    //     })
-    //     .on("mouseleave", function (){
-    //         d3.selectAll(".value")
-    //             .attr("opacity", 1)
-
-    //         d3.select(this)
-    //             .transition()
-    //             .duration(300)
-    //             .attr('opacity', 1)
-    //             .attr('x', a => xScale(a.month))
-    //             .attr('width', xScale.bandwidth())
-  
-    //       chart.selectAll('#limit').remove()
-    //       chart.selectAll('.divergence').remove()
-          
-    //     })
-        
-    // chart
-    //     .selectAll()
-    //     .data(dataset)
-    //     .enter()
-    //     .append('g')
-    //     .append('text')
-    //     .attr('class', 'value')
-    //     .attr('x', (a) => xScale(a.month) + xScale.bandwidth() / 2)
-    //     .attr('y', (a) => yScale(a.rate) + 30)
-    //     .attr('text-anchor', 'middle')
-    //     .text((a) => a.rate)
-    //     // debugger 
     /// animation ///
     chart
-        .selectAll("rect")      
+        .selectAll("rect")
         .transition()   /// d3.js animation method///
         .duration(800)  ///speed///
         .attr("y", (d) => yScale(d.rate))  /// bar height ///
         .attr("height", (d) => svgHeight - yScale(d.rate))  ///starting point///
         .delay((d,i) => {return i* 100}) ///animation speed delayed///
+        
+        
+ 
+    // chart
+    //     .selectAll()
+    //     .data(selectData)
+    //     .enter()
+    //     .append('g')
+    //     .append('text')
+    //     .attr('class', 'value')
+    //     .attr('x', (a) => xScale(a.month) + xScale.bandwidth() / 2)
+    //     .attr('y', (a) => yScale(a.rate) + 15)
+    //     .attr('text-anchor', 'middle')
+    //     .text((a) => Math.round(a.rate * 1000)/1000)
         
         // Vertical chart text ///
     chart
@@ -768,45 +727,19 @@ function plot(allData, dropDown){
         .attr("x", (svgWidth / 2))             
         .attr("text-anchor", "middle")  
         .style("font-size", "16px") 
-        .text("Yearly Average USD Exchange Rate");
+        .text("Yearly USD Exchange Rate");
 }
-
-
-
-// window.addEventListener("load", (e) => {
-//     let dropdownCurrency = GetSelectedValue() || "MXN" ;
-//     plot(currencyData, dropdownCurrency)
-//     GetSelectedValue()
-// }, false);  
-
-/// vertical grid line ///
-    // chart.append('g')
-    //     .attr('class', 'grid')
-    //     .attr('transform', `translate(0, ${height})`)
-    //     .call(d3.axisBottom()
-    //     .scale(xScale)
-    //     .tickSize(-height, 0, 0)
-    //     .tickFormat(''))
-
-
-/// horizontal grid line ///
-    
-    // chart.append('g')
-    //     .attr('class', 'grid')
-    //     .call(d3.axisLeft()
-    //     .scale(yScale)
-    //     .tickSize(-width, 0, 0)
-    //     .tickFormat(''))
-   
 
 document.addEventListener('DOMContentLoaded', (e) => {
     // GetSelectedValue()
+    
     document.getElementById("dropdownbtn").addEventListener("click", _scripts_dropdown__WEBPACK_IMPORTED_MODULE_1__.myFunction); 
     document.getElementById("myDropdown").addEventListener("change", reRender)
+    
+
 
     // console.log("helloooooo")
 });
-
 
 })();
 
