@@ -1,5 +1,6 @@
 import "./styles/main.scss";
 import {myFunction, GetSelectedValue} from "./scripts/dropdown";
+import { Callbacks } from "jquery";
 // import { render } from "sass";
 
 
@@ -79,9 +80,8 @@ function plot(allData, dropDown){
         
 
     chart.append('g')
-        .transition()
-        .duration(1000)
-        .call(d3.axisLeft(yScale));
+        .call(d3.axisLeft(yScale))
+     
 
     let xScale = d3.scaleBand()
         .range([0, svgWidth])
@@ -125,19 +125,21 @@ function plot(allData, dropDown){
         .attr("height", (d) => svgHeight - yScale(d.rate))  ///starting point///
         .delay((d,i) => {return i* 100}) ///animation speed delayed///
         
-        
  
-    // chart
-    //     .selectAll()
-    //     .data(selectData)
-    //     .enter()
-    //     .append('g')
-    //     .append('text')
-    //     .attr('class', 'value')
-    //     .attr('x', (a) => xScale(a.month) + xScale.bandwidth() / 2)
-    //     .attr('y', (a) => yScale(a.rate) + 15)
-    //     .attr('text-anchor', 'middle')
-    //     .text((a) => Math.round(a.rate * 1000)/1000)
+    chart
+
+        .selectAll()
+        .data(selectData)
+        .enter()
+        .append('g')
+        .append('text')
+        .transition()   /// d3.js animation method///
+        .duration(1500)  ///speed///
+        .attr('class', 'value')
+        .attr('x', (a) => xScale(a.month) + xScale.bandwidth() / 2)
+        .attr('y', (a) => yScale(a.rate) + 9)
+        .attr('text-anchor', 'middle')
+        .text((a) => Math.round(a.rate * 1000)/1000)
         
         // Vertical chart text ///
     chart
