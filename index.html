@@ -37,39 +37,53 @@
           </div>
       </div>
     </div>
-        
-          <br/>
-          <div class="dropdown">
-            <button id="dropdownbtn" class="dropbtn">Select Currency</button>
-            <select id="myDropdown" class="dropdown-content">
-              <option value="Please select">Please select</option>
-              <option value="JPY">JPY - Japanese Yen</option>
-              <option value="CAD">CAD - Canadian Dollar</option>
-              <option value="MXN">MXN - Mexico Peso</option>
-              <option value="TRY">TRY - Turkish Lira</option>
-              <option value="CNY">CNY - Chinese Yuan</option>
-              <option value="RUB">RUB - Russian Ruble</option>
-              <option value="EUR">EUR - Euro</option>
-              <option value="BRL">BRL - Brazilian Real</option>
-              <option value="CHF">CHF - Swiss Franc</option>
-              <option value="KRW">KRW - South Korean Won</option>
-              <option value="GBP">GBP - Pound Sterling</option>
-              <option value="INR">INR - Indian Rupee</option>
-              <option value="AUD">AUD - Australian Dollar</option>
-              <option value="SGD">SGD - Singapore Dollar</option>
-              <option value="ZAR">ZAR - South African Rand</option>
-              <option value="TWD">TWD - New Taiwan Dollar</option>
-            
-            </select>
-          </div>
-          <br/>
-
+    <div>    
+      <div class="search-box">
           
-  <div class="bar-container"> 
-    <svg class="bar-chart"></svg>
-  </div>
-  <script src="https://d3js.org/d3.v6.min.js"></script>
-  <script src="./dist/bundle.js"></script>
+          <p >Real Time Exchange Rate</p>
+          <label for="name">Base Currency:</label>
+          </br>
+          <input type="text" id="baseCurrency"/>
+          </br>
+          <label for="name">Target Currency:</label>
+          </br>
+          <input type="text" id="targetCurrency"/>
+          </br>
+          <button id="submit">Submit</button>
+    
+      </div>
+        <br/>
+        <div class="dropdown">
+          <button id="dropdownbtn" class="dropbtn">Historical Data</button>
+          <select id="myDropdown" class="dropdown-content">
+            <option value="Please select">Please select</option>
+            <option value="JPY">JPY - Japanese Yen</option>
+            <option value="CAD">CAD - Canadian Dollar</option>
+            <option value="MXN">MXN - Mexico Peso</option>
+            <option value="TRY">TRY - Turkish Lira</option>
+            <option value="CNY">CNY - Chinese Yuan</option>
+            <option value="RUB">RUB - Russian Ruble</option>
+            <option value="EUR">EUR - Euro</option>
+            <option value="BRL">BRL - Brazilian Real</option>
+            <option value="CHF">CHF - Swiss Franc</option>
+            <option value="KRW">KRW - South Korean Won</option>
+            <option value="GBP">GBP - Pound Sterling</option>
+            <option value="INR">INR - Indian Rupee</option>
+            <option value="AUD">AUD - Australian Dollar</option>
+            <option value="SGD">SGD - Singapore Dollar</option>
+            <option value="ZAR">ZAR - South African Rand</option>
+            <option value="TWD">TWD - New Taiwan Dollar</option>
+          
+          </select>
+        </div>
+        <br/>
+        <div class="bar-container"> 
+          <svg id="tooltip_show" class="bar-chart"></svg>
+        </div>
+    </div>      
+    
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="./dist/bundle.js"></script>
 
   </body>
 </html>
