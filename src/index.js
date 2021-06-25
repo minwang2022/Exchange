@@ -49,23 +49,43 @@ function reRender(){
 } 
 
 
+
 document.addEventListener('DOMContentLoaded', (e) => {
-    // GetSelectedValue()
+  
+
     document.getElementById("dropdownbtn").addEventListener("click", myFunction); 
     document.getElementById("myDropdown").addEventListener("change", reRender);
     
-    document.getElementById("submit").addEventListener("click", () => {
+    document.getElementById("submit").addEventListener("click", (e) => {
+        e.preventDefault()
+
         let baseCurrency = document.getElementById("baseCurrency").value;
         let targetCurrency = document.getElementById("targetCurrency").value;
-         searchRate(baseCurrency, targetCurrency)
         
-     })
-    
-    
-    // console.log("helloooooo")
-    
+        searchRate(baseCurrency, targetCurrency);
 
+        // clear input text //
+        document.getElementById("baseCurrency").value = "";
+        document.getElementById("targetCurrency").value = "";
+        
+    })
+    
+    // modal //
+    let modal = document.getElementById("myModal");
 
+    document.getElementById("myBtn").addEventListener("click", function(e){
+        e.preventDefault()
+        modal.style.display = "block";
+    }); 
+    document.getElementsByClassName("close")[0].addEventListener("click", function(e){
+        modal.style.display = "none";
+    }); 
+    window.onclick = function(event) {
+        // event.preventDefault()
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
 });
 
 searchRate("USD", "CAD");

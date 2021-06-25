@@ -12,46 +12,389 @@
     
     <div class="background-container">
       <div id="new-viewable-area">
-          <div id="main-header-container">
-              <div id="header-sub-container">
-                  <h1 id="main-header">Exchange Rate: Currencies Over USD</h1>
-                  <div id="new-byline">By <a target="_blank" href="https://github.com/minwang2022">Min Wang</a></div>
-              </div>
-              <ul class="logos-bar">
-                  <li class="logo-li">
-                      <a href="https://github.com/minwang2022/Exchange" target="_blank">
-                          <img src="./src/styles/github.png" alt="Link to Min's Github">
-                      </a>
-                  </li>
-                  <li class="logo-li">
-                      <a href="http://linkedin.com/in/mike-wang-38294097" target="_blank">
-                          <img src="./src/styles/linkedin.png" alt="Link to Min's LinkedIn">
-                      </a>
-                  </li>
-                  <li class="logo-li">
-                      <a href="https://angel.co/" target="_blank">
-                          <img src="./src/styles/angellist.png" alt="Link to Min's AngelList">
-                      </a>
-                  </li>
-              </ul>
+        <div id="main-header-container">
+            <div id="header-sub-container">
+                <h1 id="main-header">Exchange Rate: Real Time and Historical</h1>
+                <div id="new-byline">By <a target="_blank" href="https://github.com/minwang2022">Min Wang</a></div>
+            </div>
+            <ul class="logos-bar">
+                <li class="logo-li">
+                    <a href="https://github.com/minwang2022/Exchange" target="_blank">
+                        <img src="./src/styles/github.png" alt="Link to Min's Github">
+                    </a>
+                </li>
+                <li class="logo-li">
+                    <a href="http://linkedin.com/in/mike-wang-38294097" target="_blank">
+                        <img src="./src/styles/linkedin.png" alt="Link to Min's LinkedIn">
+                    </a>
+                </li>
+                <li class="logo-li">
+                    <a href="https://angel.co/min-wang-13/" target="_blank">
+                        <img src="./src/styles/angellist.png" alt="Link to Min's AngelList">
+                    </a>
+                </li>
+            </ul>
           </div>
       </div>
     </div>
-    <div>    
-      <div class="search-box">
-          
-          <p >Real Time Exchange Rate</p>
-          <label for="name">Base Currency Symbol:</label>
-          </br>
-          <input type="text" id="baseCurrency"/>
-          </br>
-          <label for="name">Target Currency Symbol:</label>
-          </br>
-          <input type="text" id="targetCurrency"/>
-          </br>
-          <button id="submit">Submit</button>
-    
-      </div>
+    <div class="content-box"> 
+      
+      <div class="text-area">
+        
+        <div class="search-box">
+            <form>
+              <h3>Real Time Exchange Rate</h3>
+              </br>
+              <button id="myBtn">Supported Currencies</button>
+
+              <!-- The Modal -->
+              <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <div class="print-currencies">
+                      <a name="Top">
+                        <h3 id="Top">Supported Currencies</h3>
+                      </a>
+                    
+                      <a href="#A">A</a>
+                      <a href="#B">B</a>
+                      <a href="#C">C</a>
+                      <a href="#D">D</a>
+                      <a href="#E">E</a>
+                      <a href="#F">F</a>
+                      <a href="#G">G</a>
+                      <a href="#H">H</a>
+                      <a href="#H">I</a>
+                      <a href="#J">J</a>
+                      <a href="#K">K</a>
+                      <a href="#L">L</a>
+                      <a href="#M">M</a>
+                      <a href="#N">N</a>
+                      <a href="#O">O</a>
+                      <a href="#P">P</a>
+                      <a href="#Q">Q</a>
+                      <a href="#R">R</a>
+                      <a href="#S">S</a>
+                      <a href="#T">T</a>
+                      <a href="#U">U</a>
+                      <a href="#V">V</a>
+                      <a href="#W">W</a>
+                      <a href="#X">X</a>
+                      <a href="#Y">Y</a>
+                      <a href="#Z">Z</a>
+                      </br>
+                      <a name="A">
+                        <label id="A"><strong>A:</strong></label>
+                        </br>
+                        AED (United Arab Emirates dirham),</br>
+                        AFN (Afghan afghani),	</br>
+                        ALL (Albanian lek ),</br>
+                        AMD (Armenian dram),	</br>
+                        ANG (Netherlands Antillean guilder),</br>
+                        AOA (Angolan kwanza),</br>
+                        ARS (Argentine peso),</br>
+                        AUD (Australian dollar),</br>
+                        AWG (Aruban florin),</br>
+                        AZN (Azerbaijani manat)
+                      </a>
+                      </br>
+                      <a name="B">
+                        <label id="B"><strong>B:</strong></label>
+                        </br>
+                        BAM (Bosnia and Herzegovina convertible mark),</br>
+                        BBD (Barbados dollar),</br>
+                        BDT (Bangladeshi taka),</br>
+                        BGN (Bulgarian lev),</br>
+                        BHD (Bahraini dinar),</br>
+                        BIF (Burundian franc),</br>
+                        BMD (Bermudian dollar),</br>
+                        BND (Brunei dollar),</br>
+                        BOB (Boliviano),</br>
+                        BRL (Brazilian real),</br>
+                        BSD (Bahamian dollar),</br>
+                        BTN (Bhutanese ngultrum),</br>
+                        BWP (Botswana pula),</br>
+                        BYN (Belarusian ruble),</br>
+                        BZD (Belize dollar)
+                      </a>
+                      </br>
+                      <a name="C">
+                        <label id="C"><strong>C:</strong></label>
+                        </br>
+                          CAD (Canadian dollar),</br>
+                          CDF (Congolese franc),</br>
+                          CHF (Swiss franc),</br>
+                          CLF (Unidad de Fomento (funds code)),</br>
+                          CLP (Chilean peso),</br>
+                          CNY (Renminbi (Chinese) yuan),</br>
+                          COP (Colombian peso),</br>
+                          CRC (Costa Rican colon),</br>
+                          CUC (uban convertible peso),</br>
+                          CUP (Cuban peso),</br>
+                          CVE (Cape Verdean escudo),</br>
+                          CZK (Czech koruna)
+                      </a>
+                      </br>
+                      
+                      <a name="D">
+                        <label id="D"><strong>D:</strong></label>
+                          </br>
+                          DJF (Djiboutian franc),</br>
+                          DKK (Danish krone),</br>
+                          DOP (Dominican peso),</br>
+                          DZD (Algerian dinar)
+                      </a>
+                      </br>
+                      <a name="E">
+                        <label id="E"><strong>E:</strong></label>
+                          </br>
+                          EGP (Egyptian pound),</br>
+                          ERN (Eritrean nakfa),</br>
+                          ETB (Ethiopian birr),</br>
+                          EUR (Euro)
+                      </a>
+                    </br>
+                    <a name="F">
+                      <label id="F"><strong>F:</strong></label>
+                        </br>
+                          FJD (Fiji dollar),</br>
+                          FKP (Falkland Islands pound)
+                    </a>
+                    </br>
+                    <a name="G">
+                      <label id="G"><strong>G:</strong></label>
+                        </br>
+                          GBP (Pound sterling),</br>
+                          GEL (Georgian lari),</br>
+                          GHS (Ghanaian cedi),</br>
+                          GIP (Gibraltar pound),</br>
+                          GMD (Gambian dalasi),</br>
+                          GNF (Guinean franc),</br>
+                          GTQ (Guatemalan quetzal),</br>
+                          GYD (Guyanese dollar)
+                    </a>
+                    </br>
+                    <a name="H">
+                      <label id="H"><strong>H:</strong></label>
+                      </br>
+                        HKD (Hong Kong dollar),</br>
+                        HNL (Honduran lempira),</br>
+                        HRK (Croatian kuna),</br>
+                        HTG (Haitian gourde),</br>
+                        HUF (Hungarian forint)
+                    </a>
+                    </br>
+                    <a name="I">
+                      <label id="I"><strong>I:</strong></label>
+                      </br>
+                        IDR (Indonesian rupiah),</br>
+                        ILS (Israeli new shekel),</br>
+                        INR (Indian rupee),</br>
+                        IQD (Iraqi dinar),</br>
+                        IRR (Iranian rial),</br>
+                        ISK (Icelandic króna)
+                    </a>
+                    </br>
+                    <a name="J">
+                      <label id="J"><strong>J:</strong></label>
+                      </br>
+                        JMD (Jamaican dollar),</br>
+                        JOD (Jordanian dinar),</br>
+                        JPY (Japanese yen)
+                    </a>
+                    </br>
+                    <a name="K">
+                      <label id="K"><strong>K:</strong></label>
+                        </br>
+                          KES (Kenyan shilling),</br>
+                          KGS (Kyrgyzstani som),</br>
+                          KHR (Cambodian riel),</br>
+                          KMF (Comoro franc),</br>
+                          KPW (North Korean won),</br>
+                          KRW (South Korean won),</br>
+                          KWD (Kuwaiti dinar),</br>
+                          KYD (Cayman Islands dollar),</br>
+                          KZT (Kazakhstani tenge)
+                    </a>
+                    </br>
+                    <a name="L">
+                      <label id="L"><strong>L:</strong></label>
+                        </br>
+                          LAK (Lao kip),</br>
+                          LBP (Lebanese pound),</br>
+                          LKR (Sri Lankan rupee),</br>
+                          LRD (Liberian dollar),</br>
+                          LSL (Lesotho loti),</br>
+                          LYD (Libyan dinar)
+                    </a>
+                    </br>
+                    <a name="M">
+                      <label id="M"><strong>M:</strong></label>
+                        </br>
+                          MAD (Moroccan dirham),</br>
+                          MDL (Moldovan leu),</br>
+                          MGA (Malagasy ariary),</br>
+                          MKD (Macedonian denar),</br>
+                          MMK (Myanmar kyat),</br>
+                          MNT (Mongolian tögrög),</br>
+                          MOP (Macanese pataca),</br>
+                          MRU (Mauritanian ouguiya),</br>
+                          MUR (Mauritian rupee),</br>
+                          MVR (Maldivian rufiyaa),</br>
+                          MWK (Malawian kwacha),</br>
+                          MXN (Mexican peso),</br>
+                          MXV (Mexican Unidad de Inversion (UDI) (funds code)),</br>
+                          MYR (Malaysian ringgit),</br>
+                          MZN (Mozambican metical)
+                    </a>
+                    </br>
+                    <a name="N">
+                      <label id="N"><strong>N:</strong></label>
+                        </br>
+                          NAD (Namibian dollar),</br>
+                          NGN (Nigerian naira),</br>
+                          NIO (Nicaraguan córdoba),</br>
+                          NOK (Norwegian krone),</br>
+                          NPR (Nepalese rupee),</br>
+                          NZD (New Zealand dollar)
+                    </a>
+                    </br>
+                    <a name="O">
+                      <label id="O"><strong>O:</strong></label>
+                        </br>
+                          OMR (Omani rial)
+                    </a>
+                    </br>
+                    <a name="P">
+                      <label id="P"><strong>P:</strong></label>
+                        </br>
+                          PAB (Panamanian balboa),</br>
+                          PEN (Peruvian sol),</br>
+                          PGK (Papua New Guinean kina),</br>
+                          PHP (Philippine peso[13]),</br>
+                          PKR (Pakistani rupee),</br>
+                          PLN (Polish złoty),</br>
+                          PYG (Paraguayan guaraní)
+                    </a>
+                    </br>
+                    <a name="Q">
+                      <label id="Q"><strong>Q:</strong></label>
+                      </br>
+                        QAR (Qatari riyal)
+                    </a>
+                    </br>
+                    <a name="R">
+                      <label id="R"><strong>R:</strong></label>
+                      </br>
+                        RON (Romanian leu),</br>
+                        RSD (Serbian dinar),</br>
+                        RUB (Russian ruble),</br>
+                        RWF (Rwandan franc)
+                    </a>
+                    </br>
+                    <a name="S">
+                      <label id="S"><strong>S:</strong></label>
+                      </br>
+                        SAR (Saudi riyal),</br>
+                        SBD (Solomon Islands dollar),</br>
+                        SCR (Seychelles rupee),</br>
+                        SDG (Sudanese pound),</br>
+                        SEK (Swedish krona/kronor),</br>
+                        SGD (Singapore dollar),</br>
+                        SHP (Saint Helena pound),</br>
+                        SLL (Sierra Leonean leone),</br>
+                        SOS (Somali shilling),</br>
+                        SRD (Surinamese dollar),</br>
+                        STN (São Tomé and Príncipe dobra),</br>
+                        SVC (Salvadoran colón),</br>
+                        SYP (Syrian pound),</br>
+                        SZL (Swazi lilangeni)
+                    </a>
+                    </br>
+                    <a name="T">
+                      <label id="T"><strong>T:</strong></label>
+                        </br>
+                          THB (Thai baht),</br>
+                          TJS (Tajikistani somoni),</br>
+                          TMT (Turkmenistan manat),</br>
+                          TND (Tunisian dinar),</br>
+                          TOP (Tongan paʻanga),</br>
+                          TRY (Turkish lira),</br>
+                          TTD (Trinidad and Tobago dollar),</br>
+                          TWD (New Taiwan dollar),</br>
+                          TZS (Tanzanian shilling)
+                    </a>
+                    </br>
+                    <a name="U">
+                      <label id="U"><strong>U:</strong></label>
+                      </br>
+                        UAH (Ukrainian hryvnia),</br>
+                        UGX (Ugandan shilling),</br>
+                        USD (United States dollar),</br>
+                        UYU (Uruguayan peso),</br>
+                        UZS (Uzbekistan som)
+                    </a>
+                    </br>
+                    <a name="V">
+                      <label id="V"><strong>V:</strong></label>
+                      </br>
+                        VES (Venezuelan bolívar soberano[13]),</br>
+                        VND (Vietnamese đồng),</br>
+                        VUV (Vanuatu vatu)
+                    </a>
+                    </br>
+                    <a name="W">
+                      <label id="W"><strong>W:</strong></label>
+                        </br>
+                          WST (Samoan tala)
+                    </a>
+                    </br>
+                    <a name="X">
+                      <label id="X"><strong>X:</strong></label>
+                        </br>
+                          XAF (CFA franc BEAC),</br>
+                          XAG	(Silver (one troy ounce)),</br>
+                          XAU (Gold (one troy ounce)),</br>
+                          XCD (East Caribbean dollar),</br>
+                          XDR (Special drawing rights),</br>
+                          XOF (CFA franc BCEAO),</br>
+                          XPD (Palladium (one troy ounce)),</br>
+                          XPF (CFP franc (franc Pacifique)),</br>
+                          XPT (Platinum (one troy ounce))
+                    </a>
+                    </br>
+                    <a name="X">
+                      <label id="X"><strong>Y:</strong></label>
+                      </br>
+                        YER (Yemeni rial)
+                    </a>
+                    </br>
+                    <a name="Z">
+                      <label id="Z"><strong>Z:</strong></label>
+                      </br>
+                        ZAR (South African rand),</br>
+                        ZMW (Zambian kwacha)
+                    </a>
+                    </br>
+                    </br>
+                    <div class="sticky">
+                      <a href="#Top">To the Top</a> 
+                    </div>
+                  </div>
+            </div>
+
+            </div>
+            </br>
+            </br>
+              <input type="text" placeholder="Base Currency Symbol" id="baseCurrency"/>
+              </br>
+              <input type="text" placeholder="Target Currency Symbol" id="targetCurrency"/>
+              </br>
+              <button id="submit">Submit</button>
+            </form>
+        </div>
         <br/>
         <div class="dropdown">
           <button id="dropdownbtn" class="dropbtn">Historical Data</button>
@@ -73,13 +416,13 @@
             <option value="SGD">SGD - Singapore Dollar</option>
             <option value="ZAR">ZAR - South African Rand</option>
             <option value="TWD">TWD - New Taiwan Dollar</option>
-          
           </select>
         </div>
-        <br/>
-        <div class="bar-container"> 
-          <svg id="tooltip_show" class="bar-chart"></svg>
-        </div>
+      </div>  
+      <br/>
+      <!-- <div class="bar-container">  -->
+        <svg id="tooltip_show" class="bar-chart"></svg>
+      <!-- </div> -->
     </div>      
     
     <script src="https://d3js.org/d3.v6.min.js"></script>

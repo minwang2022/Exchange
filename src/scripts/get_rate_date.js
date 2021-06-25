@@ -1,10 +1,6 @@
-// import {plot} from "./d3_graph"
-
-// let baseCurrency = document.getElementById("baseCurrency").value;
-// let targetCurrency = document.getElementById("targetCurrency").value;
 
 export function searchRate(baseCurrency, targetCurrency){
-     
+
         let api_key = '60908d461d6fcb402ec3279a3286c130';
         let url = 'https://api.currencyscoop.com/v1/latest' +'?base=' + baseCurrency + '&symbols=' + targetCurrency +
             '&api_key=' + api_key;
@@ -27,7 +23,7 @@ export function searchRate(baseCurrency, targetCurrency){
             })
             
             // debugger 
-            console.log(currencyData);
+            // console.log(currencyData);
             searchPlot(currencyData);
 
         })
