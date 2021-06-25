@@ -59,7 +59,10 @@ h1 {
 .logo-li a img:hover {
     animation: flip-icon 2s ease-in-out infinite;
 }
-
+.logo-li {
+    height: 25px;
+    width:25px;
+}
 @keyframes flip-icon {
     0% {
         transform: rotateY(0deg)
@@ -305,7 +308,8 @@ button {
 
   .print-currencies {
     font-size: 15px;
-    padding: 5px
+    padding: 5px;
+    font-family: 'Ubuntu', sans-serif;
   }
 
   
@@ -337,3 +341,11 @@ button {
     outline: 1px solid slategrey;
 }
   
+#Top {
+    display: flex;
+    justify-content: center;
+ }
+
+ #dropdownbtn {
+    margin: 0;
+ }
