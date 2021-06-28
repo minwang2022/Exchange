@@ -4,6 +4,11 @@ h1 {
     
     color: orange;
 }
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 .background-container {
     width: 90%;
     height: auto;
@@ -15,10 +20,6 @@ h1 {
     box-sizing: border-box;
 }
 
-// #header-and-nav-container {
-//     display: flex;
-//     align-items: flex-start;
-// }
 
 #main-header-container {
     position: sticky;
@@ -346,17 +347,10 @@ button {
 #Top {
     display: flex;
     justify-content: center;
- }
+}
 
- #dropdownbtn {
+#dropdownbtn {
     margin: 0;
- }
-
- body {
-    font-family: 'Roboto', sans-serif;
 }
 
-#main-header {
-    font-family: 'Roboto', sans-serif;
 
-}
