@@ -1,5 +1,7 @@
 
+
 h1 {
+    
     color: orange;
 }
 .background-container {
@@ -309,7 +311,7 @@ button {
   .print-currencies {
     font-size: 15px;
     padding: 5px;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Merriweather', serif;
   }
 
   
@@ -349,3 +351,12 @@ button {
  #dropdownbtn {
     margin: 0;
  }
+
+ body {
+    font-family: 'Roboto', sans-serif;
+}
+
+#main-header {
+    font-family: 'Roboto', sans-serif;
+
+}
