@@ -11672,11 +11672,10 @@ function searchPlot(selectData){
             .attr("y", d => yScale(0))
         .on("mouseover", mouseover)
         .on("mousemove", mousemove)
-        // debugger; 
         .on("mouseleave", mouseleave)
         // tooltip
         
-/// animation ///
+    /// animation ///
     chart
         .selectAll("rect")
         .transition()   /// d3.js animation method///
@@ -11685,16 +11684,7 @@ function searchPlot(selectData){
         .attr("height", (d) => svgHeight - yScale(d.rate))  ///starting point///
         .delay((d,i) => {return i* 10}) ///animation speed delayed///
         
-        // Animation
-    
-    chart
-        .selectAll("rect")
-        .transition()   /// d3.js animation method///
-        .duration(280)  ///speed///
-        .attr("y", (d) => yScale(d.rate))  /// bar height ///
-        .attr("height", (d) => svgHeight - yScale(d.rate))  ///starting point///
-        .delay((d,i) => {return i* 10}) ///animation speed delayed///
-        
+
    // Vertical chart text ///
    chart
         .append("text")
@@ -11897,7 +11887,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
         modal.style.display = "none";
     }); 
     window.onclick = function(event) {
-        // event.preventDefault()
         if (event.target == modal) {
             modal.style.display = "none";
         }
